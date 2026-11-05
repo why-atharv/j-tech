@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.certs/
+*.log
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+bin/
+winners.json

@@ -1,0 +1,40 @@
+{
+  "name": "pokemons-world",
+  "version": "3.0.0",
+  "private": true,
+  "type": "module",
+  "description": "POKEMONS WORLD — a 160° dome Pokémon photo hunt: 30 phones become Poké cameras.",
+  "scripts": {
+    "dev": "concurrently -k -n SERVER,VITE -c green,cyan \"node --watch server/index.js\" \"vite\"",
+    "build": "vite build",
+    "start": "node server/index.js",
+    "serve": "vite build && node server/index.js",
+    "preview": "vite preview",
+    "dev:http": "concurrently -k -n SERVER,VITE -c green,cyan \"node --watch server/index.js\" \"vite --mode http\"",
+    "tunnel": "vite build && node server/index.js --tunnel",
+    "loadtest": "node scripts/loadtest.cjs",
+    "voice": "node scripts/make-voice.mjs"
+  },
+  "dependencies": {
+    "canvas-confetti": "^1.9.3",
+    "express": "^4.21.2",
+    "qrcode": "^1.5.4",
+    "selfsigned": "^2.4.1",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1"
+  },
+  "devDependencies": {
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
+    "@react-three/postprocessing": "^2.19.1",
+    "@vitejs/plugin-basic-ssl": "^1.2.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "concurrently": "^9.1.2",
+    "msedge-tts": "^2.1.1",
+    "postprocessing": "^6.36.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.170.0",
+    "vite": "^5.4.11"
+  }
+}
